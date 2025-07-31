@@ -17,6 +17,7 @@
     background-color: #000000;
   }
   .logo {
+    cursor : pointer;
     font-weight: bold;
     font-size: 2.5rem;
     font-family: 'Style Script';
@@ -185,6 +186,7 @@
 
 .about-images img {
   width: 220px;
+  cursor : pointer;
   border-radius: 12px;
   object-fit: cover;
   position: absolute;
@@ -239,6 +241,7 @@
 }
 
 .certification-body img{
+  cursor : pointer;
   margin-bottom: 50px;
   max-width: 300px;
 }
