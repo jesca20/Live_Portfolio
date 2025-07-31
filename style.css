@@ -5,15 +5,16 @@
   }
   body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #00000;
+    background-color: #000000;
     color: white;
+    overflow-x: hidden;
   }
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background-color: #0a0a0a;
+    background-color: #000000;
   }
   .logo {
     font-weight: bold;
@@ -43,10 +44,9 @@
   }
   .hero {
     display: flex;
-    flex-direction: column;
     align-items: flex-start;
     padding: 80px 40px;
-    background: #0a0a0a;
+    background: #000000;
   }
   .hero h1 {
     font-size: 3rem;
@@ -62,8 +62,8 @@
   }
   .hero .welcome {
     margin-top: 40px;
-    font-size: 1.1rem;
-    font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: 600;
     font-family: 'Poppins';
   }
   
@@ -75,6 +75,7 @@
   
   .pacman-gif {
     max-width: 300px;
+    margin-left: 200%;
     height: auto;
     object-fit: contain;
   }
@@ -168,75 +169,136 @@
 .about-body {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
   gap: 40px;
-  justify-content: space-between;
-  align-items: flex-start;
+  margin-bottom: 100px;
 }
 
 .about-images {
   position: relative;
-  width: 100%;
-  height: 400px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  height: 400px;
 }
 
 .about-images img {
-  width: 260px;
+  width: 220px;
   border-radius: 12px;
   object-fit: cover;
   position: absolute;
+
 }
 
-#Photo1 {
+#photo2 {
+  top: 0;
+  left: 0;
+}
+
+#photo3 {
   top: 0;
   right: 0;
 }
 
-#Photo2 {
+#photo1 {
   bottom: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.about-text {
-  color: white;
-  text-align: center;
-  font-family: 'Poetsen One';
-  font-size: 1.5rem;
-  z-index: 1;
-  line-height: 150px;
+.certification {
+  background-color: #000;
+  color: #fff;
+  padding: 80px 20px;
+  font-family: 'Poppins', sans-serif;
 }
 
-.about-body { 
+.certification-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.certification-header {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.certification-header h2 {
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.certification-body {
   display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
   justify-content: space-around;
+  align-items: flex-start;
 }
-.about-body img{
+
+.certification-body img{
+  margin-bottom: 50px;
+  max-width: 300px;
+}
+
+.exposure {
+  background-color: #000;
+  color: #fff;
+  padding: 80px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.exposure-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.exposure-header {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.exposure-header h2 {
+  font-size: 60px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.exposure-body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.exposure-body img{
 max-width: 300px;
 }
 
-.contact-section {
-  padding: 80px 40px;
-  background-color: #0a0a0a;
-  color: white;
-  text-align: center;
+.contact {
+  background-color: #000;
+  color: #fff;
+  padding: 80px 20px;
+  font-family: 'Poppins', sans-serif;
 }
 
-.contact-section h2 {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
+.contact-container {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.contact-section p {
-  font-size: 1rem;
+.contact-header {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.contact-header h2 {
+  font-size: 60px;
+  font-weight: 600;
   margin-bottom: 10px;
-  color: #ccc;
-}
-
-.contact-info p {
-  margin: 10px 0;
-  font-size: 1rem;
 }
 
 .contact-info a {
@@ -245,13 +307,118 @@ max-width: 300px;
   font-weight: 500;
 }
 
-  @media (min-width: 768px) {
-    .hero {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .hero-text {
-      max-width: 50%;
-    }
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
   }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  body{
+    overflow-x: hidden;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 40px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero .subtext,
+  .hero .welcome {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+
+  .gif-wrapper {
+    padding-left: 0;
+    align-self: center;
+    margin-top: 30px;
+  }
+
+  .pacman-gif {
+    max-width: 200px;
+    margin-left: 0;
+  }
+
+.resumeinfo button {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+
+
+.resumeinfo button::after {
+  content: '+';
+  margin-left: auto;
+}
+
+  #work-content.open {
+    margin-left: 0;
+  }
+
+  .about-body,
+  .certification-body,
+  .exposure-body {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-images {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+    position: static;
+  }
+
+  .about-images img {
+    position: static;
+    width: 100%;
+    max-width: 300px;
+  }
+#photo1{
+  margin-left: 42%;
+}
+  .about-header h2,
+  .certification-header h2,
+  .exposure-header h2,
+  .contact-header h2 {
+    font-size: 36px;
+  }
+
+  .about-header p {
+    font-size: 18px;
+  }
+
+  .certification-body img,
+  .exposure-body img {
+    max-width: 100%;
+  }
+
+.certification-body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.certification-body img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20%;
+}
+
+  .contact-info a {
+    word-wrap: break-word;
+  }
+}
